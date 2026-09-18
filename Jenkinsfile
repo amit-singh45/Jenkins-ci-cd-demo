@@ -22,6 +22,8 @@ pipeline {
 
         stage('Docker Run') {
             steps {
+                bat 'docker stop jenkins-springboot-container || exit 0'
+                bat 'docker rm jenkins-springboot-container || exit 0'
                 bat 'docker run -d -p 8081:8081 --name jenkins-springboot-container jenkins-springboot-cicd-demo:1.0'
             }
         }
