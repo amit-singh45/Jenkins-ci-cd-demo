@@ -19,5 +19,11 @@ pipeline {
                 bat 'docker build -t jenkins-springboot-cicd-demo:1.0 .'
             }
         }
+
+        stage('Docker Run') {
+            steps {
+                bat 'docker run -d -p 8081:8081 --name jenkins-springboot-container jenkins-springboot-cicd-demo:1.0'
+            }
+        }
     }
 }
