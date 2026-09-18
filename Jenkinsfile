@@ -13,5 +13,11 @@ pipeline {
                 bat 'mvn test'
             }
         }
+
+        stage('Docker Build') {
+            steps {
+                bat 'docker build -t jenkins-springboot-cicd-demo:1.0 .'
+            }
+        }
     }
 }

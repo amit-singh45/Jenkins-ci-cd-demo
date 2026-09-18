@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>amitIt.in</groupId>
-	<artifactId>jenkins-Demo-Project</artifactId>
+	<artifactId>jenkins-demo-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
